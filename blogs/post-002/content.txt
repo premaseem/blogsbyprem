@@ -1,0 +1,11 @@
+Post ID: POST-002
+Title: Test Title
+Blog Name: Sample Blog
+
+This is a test blog.
+
+This is a simple publishing workflow test.
+The blog content is stored in GitHub.
+The accompanying image is intentionally minimal.
+Notion will reference these public GitHub files.
+LinkedIn publishing is not part of this test.
