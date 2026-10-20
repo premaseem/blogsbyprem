@@ -1,0 +1,26 @@
+Gamify a complex technology, and suddenly learning feels like solving a mystery. 🕵️
+
+That’s exactly what happened when I tried The SQL Murder Mystery.
+
+I started out practicing SQL. Soon, I was chasing clues, connecting evidence, and trying to figure out who did it.
+
+Every query gave me a reason to keep going.
+
+WHERE helped narrow the search. JOIN helped connect clues across tables. And an unexpected result meant it was time to rethink my assumptions.
+
+What I liked most was how familiar that process felt.
+
+A missing customer order. A payment that doesn’t add up. Duplicate records in a report.
+
+Everyday engineering has plenty of mysteries of its own. We form a theory, query the data, and follow the evidence.
+
+One useful reminder: a one-to-many JOIN can multiply your rows. Before celebrating a discovery, check whether your query created the surprise!
+
+That’s why I like gamifying complex technology. Give someone an interesting problem, room to experiment, and a little curiosity, and learning becomes fun.
+
+If you’re learning SQL or brushing up, give this a try:
+https://mystery.knightlab.com/
+
+Which technical skill would you love to learn through a game?
+
+#SQL #SoftwareEngineering #DataEngineering #LearnByDoing
