@@ -1,0 +1,38 @@
+Lock the Room, Not Every Plate: PostgreSQL Schemas for Security
+
+Your database doesn't need more locks. It needs better rooms.
+
+Picture a busy restaurant. Guests walk freely around the dining hall. Only the staff go into the kitchen. And the manager's office, where the cash and payroll sit, has its own key that hardly anyone carries.
+
+Nobody hands out a separate key for every plate. You just lock the right rooms.
+
+PostgreSQL works the same way, and the "room" is called a schema.
+
+In PostgreSQL the hierarchy goes database → schema → table. A schema is a named namespace inside a database. On its own that just sounds like organization, but it turns into a security boundary the moment you attach permissions to it.
+
+Here's a real example. Your company_db has three schemas:
+• public_info: employees, departments. Everyone can read it.
+• hr: leave and attendance. Only the HR team.
+• finance: salaries and payroll. Only finance.
+
+The key is USAGE. Even if someone has SELECT on a table, they can't reach it without USAGE on the schema that holds it. So:
+
+GRANT USAGE ON SCHEMA finance TO finance_team;
+
+One line, and the whole room is locked for everyone else.
+
+The neat design trick is to split sensitive columns out. Keep employee names in public_info.employees and move salary into finance.employee_compensation. Now an accidental SELECT * from a reporting tool simply can't leak pay data.
+
+How does MongoDB compare? MongoDB goes database → collection, and you'd build custom roles with privileges at the database or collection level. That's perfectly capable, but you don't get a grouping layer in between. Postgres gives you one extra "room" to reason about.
+
+Now the trade-offs, because nothing is free:
+1. Since PostgreSQL 15, ordinary users can no longer create objects in the public schema by default. Older versions allowed it, so check yours.
+2. New tables don't pick up grants automatically. Use ALTER DEFAULT PRIVILEGES, or next month's new finance table will quietly break someone's access (or quietly over-share).
+3. Schemas don't replace column-level grants or Row-Level Security. Schemas lock the room, RLS decides which rows you see once you're inside. Mature systems use both.
+4. search_path can confuse people, so fully qualify names like finance.payroll in your production code.
+
+Lesson learned: security scales better when you design boundaries in your data model, not just in your application code. Lock the room, not every plate.
+
+How do you separate sensitive data in your systems? Schemas, separate databases, or RLS?
+
+#PostgreSQL #DatabaseSecurity #SystemDesign #SoftwareEngineering #MongoDB #DataEngineering
