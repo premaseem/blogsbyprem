@@ -1,0 +1,31 @@
+SQL engineers: one phone number changed. Why are 47 rows having a crisis? 😂
+
+Fun & Learn: Understanding Data Normalization — 1NF, 2NF & 3NF
+
+Your college advisor changed his phone number.
+Your database turned it into a group project.
+
+Normalization helps prevent duplicate facts, redundant updates, and inconsistent data.
+
+Here are the first three normal forms:
+
+1️⃣ 1NF — One value per cell.
+Don’t cram “Math, Physics, Napping” into a Classes field. Give each student–class enrollment its own row. Yes, even Napping.
+
+2️⃣ 2NF — Depend on the whole key.
+Start with 1NF. If an enrollment’s key is (StudentID, ClassID), StudentName depends only on StudentID. Keep it in Students; keep class details in Classes.
+
+3️⃣ 3NF — No indirect dependencies between non-key facts.
+Start with 2NF. A student’s AdvisorID can live in Students, but AdvisorPhone belongs in Advisors—it depends on the advisor.
+
+Now one phone change means one update.
+Lunch is saved. 🌮
+
+For production transactional systems, normalization is usually a strong default: fewer duplicate facts mean fewer update touch points and fewer chances for contradictions.
+
+For data warehousing and analytics, deliberate denormalization is common. Combining data can reduce or avoid joins and make read-heavy reporting faster, at the cost of duplication and more work keeping copies consistent.
+
+Normalize to simplify updates.
+Denormalize where it helps reads.
+
+#SQL #DatabaseDesign #DataEngineering
