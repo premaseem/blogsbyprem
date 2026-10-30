@@ -1,0 +1,18 @@
+Where did the money go? Lost in thin air ;-) ??
+
+That's exactly the kind of nightmare database transactions are designed to prevent.
+
+A transaction groups multiple database operations into a single all-or-nothing unit. When both debit and credit belong to one database transaction:
+
+• Debit $10,000 from Account A.
+• Credit $10,000 to Account B.
+• COMMIT only if both succeed.
+• If either fails, ROLLBACK both changes.
+
+This is atomicity, the A in ACID. Either the entire transfer succeeds, or none of it does.
+
+One twist: a network timeout doesn't necessarily mean the transaction failed. The server may have committed even if the response never reached the client. That is why retry safety and idempotency matter too.
+
+And what happens when the money moves across different databases or services? That's a bigger distributed-systems challenge and a perfect topic for the next post on Two-Phase Commit (2PC).
+
+#DatabaseTransactions #ACID #SystemDesign #BackendEngineering #SoftwareEngineering
