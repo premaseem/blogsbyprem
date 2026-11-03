@@ -1,0 +1,56 @@
+SLI, SLO and SLA Explained with a Car
+Post ID: POST-10
+Approved image: SLI/SLO/SLA car dashboard infographic (1536x1024 PNG), currently attached to the WordPress email (Gmail ID: 1a1a2a5e6025f404). The GitHub image.png upload is NOT yet complete. DO NOT use the expected image URL until that binary is uploaded and verified.
+
+LINKEDIN CAPTION
+🚗 Your car gives 12 MPG. The dealer promised 15. Your goal was 20.
+
+That’s a great way to understand SLI, SLO, and SLA.
+
+These terms are often explained in SRE, but they go beyond uptime. They are useful across data, software, and AI platforms when you need to define a target, measure performance, and make a promise.
+
+🎯 SLO (Service Level Objective): Your target. “I want my car to give 20+ MPG.”
+📊 SLI (Service Level Indicator): Your measurement. “Average mileage this month is 18 MPG.”
+🤝 SLA (Service Level Agreement): Your contractual promise. “This car will deliver at least 15 MPG under agreed conditions.”
+
+SLO = what you want.
+SLI = what you measure.
+SLA = what you promise, including consequences if the agreement is breached.
+
+Now apply it to a data pipeline:
+• SLO: 95% of events should arrive within 5 minutes.
+• SLI: measured data-arrival delay and percentage meeting the five-minute window.
+• SLA: downstream customers are promised delivery within 15 minutes, subject to agreed remedies.
+
+Or an AI platform:
+• SLO: target response latency, knowledge freshness, or answer quality.
+• SLI: measured latency, retrieval success, or evaluated answer quality.
+• SLA: the formal service commitment to users.
+
+A metric alone is just a number. An objective gives it meaning. An agreement gives it accountability.
+
+💬 Do your teams distinguish SLI, SLO, and SLA clearly?
+
+#SoftwareEngineering #DataEngineering #AIEngineering #SRE #SystemDesign
+
+SUBSTACK NOTES
+🚗 Your car gets 12 MPG. Your goal was 20. The dealer promised 15.
+
+That’s SLO, SLI and SLA in one drive:
+🎯 SLO = target (20+ MPG)
+📊 SLI = measured result (say 18 MPG this month)
+🤝 SLA = customer promise (at least 15 MPG, under agreed conditions, with defined remedies)
+
+The same thinking works in data pipelines and AI platforms. Set a freshness or quality objective, measure the real result, and make only the commitments you can support.
+
+A metric is a number. An objective gives it meaning. An agreement gives it accountability.
+
+#DataEngineering #SoftwareEngineering #AIEngineering
+
+WORDPRESS
+Already submitted by email with attached PNG. DO NOT resend. Gmail SENT id 1a1a2a5e6025f404. Verify live WordPress URL and then record it in Notion. Complete article stored in WordPress Post Content cell.
+
+STATUS HANDOFF
+LinkedIn 2026-11-03 1:00 PM CST via Buffer: approval granted, NOT scheduled from ChatGPT. Check Buffer existing drafts/queue/sent before creating. If scheduled/published, DO NOT duplicate.
+Substack Notes: approval granted for immediate publication, NOT submitted from ChatGPT. Check Buffer Notes queue/sent and actual Substack feed first.
+WordPress: Gmail SENT with PNG; do not submit again even if public verification is pending.
